@@ -35,25 +35,33 @@ const shuka = {
   name: "Shuka",
   price: 5000,
   quantity: 0,
-  productId: 1003,
+  productId: 1004,
   image:"images/Shuka.jpg"
 };
 
-
-/* Images provided in /images folder. All images from Unsplash.com
-   - cherry.jpg by Mae Mu
-   - orange.jpg by Mae Mu
-   - strawberry.jpg by Allec Gomes
-*/
+products.push(brideearings,cowrieshells,earbeads,shuka)
 
 /* Declare an empty array named cart to hold the items in the cart */
+
+const cart = []
 
 /* Create a function named addProductToCart that takes in the product productId as an argument
   - addProductToCart should get the correct product based on the productId
   - addProductToCart should then increase the product's quantity
   - if the product is not already in the cart, add it to the cart
 */
+function addProductToCart(productId){
+  const product = products.find((prod) =>prod.productId === productId);
+  if(!product){
+    return;
+  }
 
+  const cartProduct = cart.find((item) => item.productId === productId);
+  if(cartProduct){
+    cartProduct.quantity++
+    cart.push(product);
+  }
+}
 /* Create a function named increaseQuantity that takes in the productId as an argument
   - increaseQuantity should get the correct product based on the productId
   - increaseQuantity should then increase the product's quantity
