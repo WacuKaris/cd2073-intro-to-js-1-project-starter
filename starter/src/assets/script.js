@@ -1,6 +1,8 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
 
-/* Create 3 or more product objects using object literal notation 
+const products = [];
+
+/* Create 3 or more product objects using object literal notation
    Each product should include five properties
    - name: name of product (string)
    - price: price of product (number)
@@ -8,6 +10,35 @@
    - productId: unique id for the product (number)
    - image: picture of product (url string)
 */
+const brideearings = {
+  name: "Bride Earring",
+  price: 3000,
+  quantity: 0,
+  productId: 1001,
+  image:"images/brideearings.jpg"
+};
+const cowrieshells = {
+  name: "Cowrie Shells",
+  price: 1000,
+  quantity: 0,
+  productId: 1002,
+  image:"images/cowrieshells.jpg"
+};
+const earbeads = {
+  name: "Ear beads",
+  price: 5000,
+  quantity: 0,
+  productId: 1003,
+  image:"images/earbeads.jpg"
+};
+const shuka = {
+  name: "Shuka",
+  price: 5000,
+  quantity: 0,
+  productId: 1003,
+  image:"images/Shuka.jpg"
+};
+
 
 /* Images provided in /images folder. All images from Unsplash.com
    - cherry.jpg by Mae Mu
@@ -52,13 +83,13 @@
   - amount is the money paid by customer
   - pay will return a negative number if there is a remaining balance
   - pay will return a positive number if money should be returned to customer
-  Hint: cartTotal function gives us cost of all the products in the cart  
+  Hint: cartTotal function gives us cost of all the products in the cart
 */
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
 
 
-/* The following is for running unit tests. 
+/* The following is for running unit tests.
    To fully complete this project, it is expected that all tests pass.
    Run the following command in terminal to run tests
    npm run test
@@ -72,7 +103,7 @@ module.exports = {
    decreaseQuantity,
    removeProductFromCart,
    cartTotal,
-   pay, 
+   pay,
    emptyCart,
    /* Uncomment the following line if completing the currency converter bonus */
    // currency
